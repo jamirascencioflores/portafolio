@@ -118,11 +118,12 @@
         <input type="text" name="nombre" placeholder="Tu nombre" required>
         <input type="email" name="email" placeholder="Tu correo" required>
         <textarea name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+        <div class="g-recaptcha" data-sitekey="6Lc12_4rAAAAABlMwQoHG3BZed9D5PTzR0YRvc1h"></div>
         <button type="submit">Enviar mensaje</button>
-
+        
         <!-- Opciones ocultas -->
         <input type="hidden" name="_subject" value="Nuevo mensaje desde tu portafolio">
-        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_captcha" value="true">
         <input type="hidden" name="_next" value="https://jamirascencioflores.github.io/portafolio/thanks.html">
     </form>
 
@@ -139,5 +140,8 @@
 </footer>
 
 <script src="script.js"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="script.js"></script>
+</body>
 </body>
 </html>
