@@ -18,8 +18,8 @@ section {
     scroll-margin-top: 80px;
 }
 body {
-    background-color: #0d1117; /* Fondo oscuro */
-    color: #e6edf3; /* Texto claro */
+    background-color: #0d1117;
+    color: #e6edf3;
     line-height: 1.6;
 }
 
@@ -77,6 +77,10 @@ header {
 
 .btn-cv:hover {
     background: #1f6feb;
+}
+
+.menu-toggle {
+    display: none;
 }
 
 /* ==============================
@@ -343,27 +347,132 @@ footer {
 }
 
 /* ==============================
-   RESPONSIVE
+   RESPONSIVE FINAL (AJUSTADO PARA MÓVIL)
    ============================== */
+
+/* ✅ Ajuste general de scroll */
+section,
+#sobre-mi,
+#habilidades,
+#proyectos,
+#contacto {
+    scroll-margin-top: 90px;
+}
+
+/* 📱 Ajustes para pantallas pequeñas */
 @media (max-width: 768px) {
+
+    /* --- HEADER --- */
+    header {
+        padding: 0.6rem 1rem;
+    }
+
     .navbar {
         flex-direction: column;
-        gap: 1rem;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 0.5rem 1rem;
+        position: relative;
+    }
+
+    .logo {
+        font-size: 1.3rem;
+        color: #58a6ff;
+        margin-bottom: 0.3rem;
+    }
+
+    /* --- BOTÓN MENÚ HAMBURGUESA --- */
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: 2px solid #58a6ff;
+        color: #58a6ff;
+        border-radius: 6px;
+        padding: 0.3rem 0.6rem;
+        font-size: 1.2rem;
+        cursor: pointer;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+    }
+
+    /* Oculta el menú por defecto en móvil */
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 0.6rem;
+        margin-top: 1rem;
+    }
+
+    /* Cuando el menú está activo */
+    .menu.active {
+        display: flex;
+    }
+
+    .menu a {
+        width: 100%;
+        text-align: center;
+        padding: 0.7rem 0;
+        border-bottom: 1px solid #30363d;
+    }
+
+    /* --- SECCIONES --- */
+    section,
+    #sobre-mi,
+    #habilidades,
+    #proyectos,
+    #contacto {
+        scroll-margin-top: 140px;
+    }
+
+    /* --- HERO --- */
+    .hero {
+        height: auto;
+        padding-top: 140px;
+        padding-bottom: 3rem;
+        align-items: flex-start;
     }
 
     .hero-content h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
-    .menu {
-        flex-wrap: wrap;
-        justify-content: center;
+    .hero-content p {
+        font-size: 0.95rem;
     }
 
+    /* --- CONTACTO --- */
+    .contacto {
+        padding: 3rem 1rem;
+    }
+
+    .contact-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .contact-links a {
+        width: 90%;
+        text-align: center;
+        background: #161b22;
+        padding: 0.8rem;
+        border-radius: 8px;
+        border: 1px solid #30363d;
+    }
+
+    .contact-links a:hover {
+        background-color: #58a6ff;
+        color: #fff;
+    }
+
+    /* --- GENERAL --- */
     .section {
         padding: 4rem 1rem;
     }
 }
+
 
 /* ==============================
    ANIMACIONES SUAVES (scroll)
@@ -393,3 +502,6 @@ footer {
         transform: translateY(0);
     }
 }
+
+
+
